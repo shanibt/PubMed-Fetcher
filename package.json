@@ -8,11 +8,18 @@
   "name": "pubmed-fetcher",
   "version": "1.0.0",
   "main": "server.js",
+  "homepage": "https://shanibt.github.io/pubmed-fetcher",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo 'No build step needed'", 
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d public",
     "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
 }

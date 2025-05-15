@@ -10,11 +10,14 @@ const port = 3000;
 app.use(bodyParser.json());
 
 // Serve static files from the 'public' directory
-app.use(express.static(path.join(__dirname, "public")));
+// app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(__dirname));
 
 // Handle root route to serve index.html
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "public", "index.html"));
+    res.sendFile(path.join(__dirname, "index.html"));
+    // res.sendFile(path.join(__dirname, "public", "index.html"));
+
 });
 
 // Endpoint to run the Node.js script
